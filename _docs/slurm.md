@@ -19,6 +19,16 @@ container:
 ```
 srun --container-name=test --container-writable python script.py
 ```
+
+### Permission error
+You might get an error like `mkdir: cannot create directory ‘/run/user/11183’: Permission denied` 
+when using enroot or pyxis.  Try 
+```
+unset XDG_RUNTIME_DIR
+``` 
+or setting it to something
+you can access, if you have problems with that.
+
 ## Interactive
 You can use `salloc` to get an interactive terminal, but if you need to connect 
 to an `srun` command use the `--pty` flag like so:
