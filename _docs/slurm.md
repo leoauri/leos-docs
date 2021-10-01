@@ -29,6 +29,11 @@ unset XDG_RUNTIME_DIR
 or setting it to something
 you can access, if you have problems with that.
 
+## Working directory
+
+For an `srun` command set the working directory with the `--container-workdir=DIR`
+option.
+
 ## Interactive
 You can use `salloc` to get an interactive terminal, but if you need to connect 
 to an `srun` command use the `--pty` flag like so:
